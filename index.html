@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Himanshu's Cafe</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="nav-left">
+          <i class="fa-solid fa-mug-hot cafe-icon"></i>
+          <span class="logo-text">YOUR'S CAFE</span>
+        </div>
+
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#menu" id="orderLink">Order</a></li>
+            <li><a href="#pay" id="payLink">Pay</a></li>
+            <li><a href="#gift">Gift</a></li>
+            <li><a href="#store">Store</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button onclick="searchItem()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+
+          <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cartCount">0</span>
+          </div>
+
+          <!-- Cart Sidebar -->
+          <div id="cartSidebar" class="cart-sidebar">
+            <div class="cart-header">
+              <h2>Your Cart</h2>
+              <button onclick="toggleCart()">✖</button>
+            </div>
+
+            <div id="cartItems"></div>
+
+            <h3>Total: ₹<span id="cartTotal">0</span></h3>
+          </div>
+
+          <i class="fa-solid fa-user account-icon"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Khao, Piyo, Jiyo!..</h2>
+        <p>"Rules are optional. Living isn't."</p>
+        <button class="btn-primary" onclick="scrollToMenu()">
+          Order Now
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== CURATIONS ===== -->
+    <section class="curations">
+      <div class="container">
+        <h2>Crafted for the Soul</h2>
+
+        <div class="curation-container">
+          <div class="curation-item" onclick="showCategory('veg')">
+            <img src="veg.png" alt="Veg" />
+            <p>Veg</p>
+          </div>
+
+          <div class="curation-item" onclick="showCategory('nonveg')">
+            <img src="non veg.png" alt="Non-Veg" />
+            <p>Non-Veg</p>
+          </div>
+
+          <div class="curation-item" onclick="showCategory('chinese')">
+            <img src="chinese.png" alt="Chinese" />
+            <p>Chinese</p>
+          </div>
+
+          <div class="curation-item" onclick="showCategory('italian')">
+            <img src="italian.png" alt="Italian" />
+            <p>Italian</p>
+          </div>
+
+          <div class="curation-item" onclick="showCategory('drinks')">
+            <img src="drinks.png" alt="Drinks" />
+            <p>Drinks</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENU SECTION (Dynamic) ===== -->
+    <section class="menu-section" id="menu">
+
+      <div id="veg" class="menu-items">
+        <h2>Veg Specials</h2>
+        <div class="menu-grid"></div>
+      </div>
+
+      <div id="nonveg" class="menu-items">
+        <h2>Non-Veg Specials</h2>
+        <div class="menu-grid"></div>
+      </div>
+
+      <div id="chinese" class="menu-items">
+        <h2>Chinese</h2>
+        <div class="menu-grid"></div>
+      </div>
+
+      <div id="italian" class="menu-items">
+        <h2>Italian</h2>
+        <div class="menu-grid"></div>
+      </div>
+
+      <div id="drinks" class="menu-items">
+        <h2>Drinks</h2>
+        <div class="menu-grid"></div>
+      </div>
+
+    </section>
+
+    <!-- Bottom Image -->
+    <img src="image1.png" alt="cafe" class="bottom-image" />
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Himanshu Tiwari. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  </body>
+</html>
