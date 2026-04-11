@@ -1,4 +1,4 @@
-/* ================ MENU DATA =============== */
+/* ================ MENU DATA ============== */
 const menuData = [
   // VEG
   { category: "veg", name: "Paneer Tikka", price: 180, image: "panner-tikka.png" },
